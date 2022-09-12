@@ -1,1 +1,1 @@
-# ASE-230-Assignment-2---Class-photo-book-part-2-4-
+# Need to Click on Details button from Index page to get the details. Clicking the avatar won't work properly.
