@@ -1,0 +1,160 @@
+<?php
+const ArrayProfiles=[
+    [
+      'name' => 'Hamad Almansoori',
+      'designation' => 'Student',
+        'avataar'=> 'avatar2.png',
+        'profession' => 'Network Architect',
+        'company' => 'Apple',
+        'email' => 'almansoorh1@mymail.nku.edu',
+        'intro' => 'I am a Computer Science student. My aim is to gain knowledge of electronics, mathematics, digital logic design, programming languages, circuit analysis and Network Infrastructure in order to provide IT business solution to clients.',
+        'quote' => 'Today I choose life. Every morning when I wake up I can choose joy, happiness, negativity, pain... To feel the freedom that comes from being able to continue to make mistakes and choices - today I choose to feel life, not to deny my humanity but embrace it.',
+        'funfact' => 'If I could have any superpower, it would be to speak any language so I could connect with anyone in the world.',
+
+    ],
+    [
+        'name' => 'Nazrul Islam',
+        'designation' => 'UI Designer',
+        'avataar'=> 'avatar5.png',
+        'profession' => 'Server-Side Developer',
+        'company' => 'Google',
+        'email' => 'support@technol.com',
+        'intro' => 'Along with your plans, you should consider developing an action orientation that will keep you motivated to move forward at all times. This requires a little self-discipline, but is a crucial component to achievement of any kind. Before starting any new activity, ask yourself if that activity will move you closer to your goals. If the answer is no, you may want to reconsider doing it at that time.',
+        'quote' => 'The price is something not necessarily defined as financial. It could be time, effort, sacrifice, money or perhaps, something else.',
+        'funfact' => 'It is truly amazing the damage that we, as parents, can inflict on our children. So why do we do it? For the most part, we don’t do it intentionally or with malice. In the majority of cases, the cause is a well-meaning but unskilled or un-thinking parent, who says the wrong thing at the wrong time, and the message sticks – as simple as that!',
+
+    ],
+    [
+        'name' => 'Riyadh Khan',
+        'designation' => 'Developer',
+        'avataar'=> 'avatar4.png',
+        'profession' => 'Server-Side Developer',
+        'company' => 'Google',
+        'email' => 'support@technol.com',
+        'intro' => 'Along with your plans, you should consider developing an action orientation that will keep you motivated to move forward at all times. This requires a little self-discipline, but is a crucial component to achievement of any kind. Before starting any new activity, ask yourself if that activity will move you closer to your goals. If the answer is no, you may want to reconsider doing it at that time.',
+        'quote' => 'The price is something not necessarily defined as financial. It could be time, effort, sacrifice, money or perhaps, something else.',
+        'funfact' => 'It is truly amazing the damage that we, as parents, can inflict on our children. So why do we do it? For the most part, we don’t do it intentionally or with malice. In the majority of cases, the cause is a well-meaning but unskilled or un-thinking parent, who says the wrong thing at the wrong time, and the message sticks – as simple as that!',
+
+    ]
+];
+?>
+<html lang="en">
+<!-- https://www.bootdey.com/snippets/view/team-user-resume#html -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <body>
+    <link rel="stylesheet" href="assets/css/detail.css" />
+    <title><?= "ASE 230 - Hamad Almansori"; ?></title>
+    <div class="container text-center mb-5">
+      <h1><?= ArrayProfiles[$_GET['index']]['name'] ?></h1>
+      <p class="designation"><?= ArrayProfiles[$_GET['index']]['designation'] ?></p>
+      <a href="/index.php">Go to Index</a>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-6">
+          <div class="mb-2">
+            <img class="w-100" src="https://bootdey.com/img/Content/avatar/<?= ArrayProfiles[$_GET['index']]['avataar'] ?>" alt="">
+          </div>
+          <div class="mb-2 d-flex">
+            <h4 class="font-weight-normal"><?= ArrayProfiles[$_GET['index']]['name'] ?></h4>
+            <div class="social d-flex ml-auto">
+              <p class="pr-2 font-weight-normal">Follow me on:</p>
+              <a href="#" class="text-muted mr-1">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-muted mr-1">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-muted mr-1">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-muted">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="mb-2">
+            <ul class="list-unstyled">
+              <li class="media">
+                <span class="w-25 text-black font-weight-normal"><?php echo 'Dream profession:'; ?></span>
+                <label class="media-body"><?= ArrayProfiles[$_GET['index']]['profession'] ?></label>
+              </li>
+              <li class="media">
+                <span class="w-25 text-black font-weight-normal"><?php echo 'Dream company:';?>  </span>
+                <label class="media-body"><?= ArrayProfiles[$_GET['index']]['company'] ?></label>
+              </li>
+              <li class="media">
+                <span class="w-25 text-black font-weight-normal"><?php echo 'Email:'; ?> </span>
+                <label class="media-body"><?= ArrayProfiles[$_GET['index']]['email'] ?></label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-6 pl-xl-3">
+        	<?php echo'<h5 class="font-weight-normal">Short Intro</h5>'; ?>
+        	<p>
+						<?= ArrayProfiles[$_GET['index']]['intro'] ?>
+					</p>
+        	<div class="my-2 bg-light p-2">
+          	<p class="font-italic mb-0">
+							<?= ArrayProfiles[$_GET['index']]['quote'] ?>
+						</p>
+        	</div>
+        	<div class="mb-2 mt-2 pt-1">
+          	<h5 class="font-weight-normal">
+							 <?php echo 'Top skills'; ?>
+						</h5>
+        	</div>
+        	<div class="py-1">
+          	<div class="progress">
+            	<div class="progress-bar" role="progressbar" style="width:85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+              	<div class="progress-bar-title">
+									<?php echo 'Network Fundamentals'; ?>
+								</div>
+              	<span class="progress-bar-number">
+									<?php echo '85%'; ?>
+								</span>
+            	</div>
+          	</div>
+        	</div>
+        	<div class="py-1">
+          	<div class="progress">
+            	<div class="progress-bar" role="progressbar" style="width:70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              	<div class="progress-bar-title">
+									<?php echo 'Network Administration'; ?>
+								</div>
+              	<span class="progress-bar-number">
+									<?php echo '70%'; ?>
+								</span>
+            	</div>
+          	</div>
+        	</div>
+        	<div class="py-1">
+          	<div class="progress">
+            	<div class="progress-bar" role="progressbar" style="width:77%" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">
+              	<div class="progress-bar-title">
+									<?php echo 'Troubleshooting Network Errors'; ?>
+								</div>
+              	<span class="progress-bar-number">
+									<?php echo '77%'; ?>
+								</span>
+            	</div>
+          	</div>
+        	</div>
+        	<h5 class="font-weight-normal">
+						<?php echo 'Fun fact'; ?>
+					</h5>
+        	<p>
+						<?= ArrayProfiles[$_GET['index']]['funfact'] ?>
+					</p>
+      	</div>
+    	</div>
+  	</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>
